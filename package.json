@@ -1,0 +1,26 @@
+{
+  "name": "codemod-prefer-explicit-assert",
+  "version": "0.0.1",
+  "description": "jscodeshift react-testing-library codemod prefer-explicit-assert",
+  "main": "index.js",
+  "author": "Dom Gautier",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "transform": "jscodeshift --parser=tsx -t=./src/prefer-explicit-assert.ts --extensions=js,jsx,ts,tsx --ignore-pattern='../**/node_modules/**' --ignore-pattern='**/node_modules/**'"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "jscodeshift": "^0.13.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "rootDir": "src"
+  }
+}
